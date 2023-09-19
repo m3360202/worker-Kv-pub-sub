@@ -1,2 +1,2 @@
-# worker-Kv-pub-sub
-cloudflare worker KV use redis and pub/sub service
+# Cloudflare Worker Redis
+Redis Online Storage with Cloudflare Working
