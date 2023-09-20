@@ -3,6 +3,7 @@
  * boolean indicating if the request uses that HTTP method,
  * header, host or referrer.
  */
+const { subscribeController } = require('./controller');
 const Method = method => req =>
     req.method.toLowerCase() === method.toLowerCase()
 const Connect = Method('connect')
@@ -46,7 +47,6 @@ class Router {
     connect(url, handler) {
         return this.handle([Connect, Path(url)], handler)
     }
-
     delete(url, handler) {
         return this.handle([Delete, Path(url)], handler)
     }
